@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Maze SYSTEM "dtd.dtd">
+<Maze name="Test4" height="20" width="20">
+<Items>
+		<Hole posX="5" posY="4"/>
+		<ZPM posX="8" posY="4"/>
+		<ZPM posX="16" posY="6"/>
+		<ZPM posX="2" posY="5"/>
+		<ZPM posX="8" posY="17"/>
+		<ZPM posX="3" posY="10"/>
+		<ZPM posX="17" posY="18"/>
+		<ZPM posX="14" posY="19"/>
+		<ZPM posX="19" posY="15"/>
+		<ZPM posX="8" posY="9"/>
+		<ZPM posX="1" posY="7"/>
+		<ZPM posX="7" posY="6"/>
+		<Scale posX="15" posY="14" id="1"/>
+		<Box posX="15" posY="10" weight="6"/>
+		<Box posX="19" posY="3" weight="7"/>
+</Items>
+	<Walls>
+		<Wall posX="6" posY="4" isSpecial="false" hasDoor="true" scaleID="1" orientation="2"/>
+		<Wall posX="9" posY="4" isSpecial="true" hasDoor="false" orientation="2"/>
+		<Wall posX="19" posY="18" isSpecial="true" hasDoor="false" orientation="3"/>
+		<Wall posX="2" posY="4" isSpecial="false" hasDoor="false" orientation="1"/>
+		<Wall posX="2" posY="4" isSpecial="false" hasDoor="false" orientation="3"/>
+		<Wall posX="3" posY="4" isSpecial="false" hasDoor="false" orientation="1"/>
+		<Wall posX="3" posY="4" isSpecial="false" hasDoor="false" orientation="3"/>
+		<Wall posX="4" posY="4" isSpecial="false" hasDoor="false" orientation="1"/>
+		<Wall posX="4" posY="4" isSpecial="false" hasDoor="false" orientation="3"/>
+		<Wall posX="5" posY="4" isSpecial="false" hasDoor="false" orientation="1"/>
+		
+		<Wall posX="5" posY="4" isSpecial="false" hasDoor="false" orientation="3"/>
+		<Wall posX="6" posY="4" isSpecial="false" hasDoor="false" orientation="1"/>
+		<Wall posX="6" posY="4" isSpecial="false" hasDoor="false" orientation="3"/>
+		<Wall posX="7" posY="4" isSpecial="false" hasDoor="false" orientation="1"/>
+		<Wall posX="7" posY="4" isSpecial="false" hasDoor="false" orientation="3"/>
+		<Wall posX="8" posY="4" isSpecial="false" hasDoor="false" orientation="1"/>
+		<Wall posX="8" posY="4" isSpecial="false" hasDoor="false" orientation="3"/>
+		
+		<Wall posX="9" posY="4" isSpecial="false" hasDoor="false" orientation="1"/>
+		<Wall posX="9" posY="4" isSpecial="false" hasDoor="false" orientation="3"/>
+		<Wall posX="10" posY="4" isSpecial="false" hasDoor="false" orientation="1"/>
+		<Wall posX="10" posY="4" isSpecial="false" hasDoor="false" orientation="3"/>
+		<Wall posX="11" posY="4" isSpecial="false" hasDoor="false" orientation="1"/>
+		<Wall posX="11" posY="4" isSpecial="false" hasDoor="false" orientation="3"/>
+		<Wall posX="12" posY="4" isSpecial="false" hasDoor="false" orientation="1"/>
+		<Wall posX="12" posY="4" isSpecial="false" hasDoor="false" orientation="3"/>
+		<Wall posX="12" posY="4" isSpecial="false" hasDoor="false" orientation="2"/>
+	</Walls>
+	
+</Maze>

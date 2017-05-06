@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Maze SYSTEM "dtd.dtd">
+<Maze name="Test2.1" height="1" width="3">
+	<Items>
+		<Hole posX="2" posY="0"/>
+	</Items>
+	<Walls>
+		<Wall posX="0" posY="0" isSpecial="false" hasDoor="false" orientation="3"/>
+		<Wall posX="0" posY="0" isSpecial="false" hasDoor="false" orientation="1"/>
+		<Wall posX="0" posY="0" isSpecial="true" hasDoor="false" orientation="4"/>
+		<Wall posX="1" posY="0" isSpecial="true" hasDoor="false" orientation="1"/>
+		<Wall posX="1" posY="0" isSpecial="false" hasDoor="false" orientation="3"/>
+		<Wall posX="2" posY="0" isSpecial="false" hasDoor="false" orientation="1"/>
+		<Wall posX="2" posY="0" isSpecial="false" hasDoor="false" orientation="2"/>
+		<Wall posX="2" posY="0" isSpecial="false" hasDoor="false" orientation="3"/>
+	</Walls>
+	
+</Maze>
