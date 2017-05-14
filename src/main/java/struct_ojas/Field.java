@@ -182,7 +182,7 @@ public class Field {
 	 */
 	public Item performPick() {
 		if (items.size() != 0) {
-			Item temp = items.get(items.size() - 1);
+			Item temp = items.get(items.size() - 1).onPickAction();
 			if (temp != null) {
 				items.remove(temp);
 				this.stepOff(temp.getWeight());
@@ -265,6 +265,9 @@ public class Field {
 		return items.size();
 	}
 
+	public void setItems(List<Item> items){
+		this.items = items;
+	}
 	/*
 	 * A kirajzolásért felelõs függvény.
 	 * 
