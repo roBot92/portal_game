@@ -113,9 +113,10 @@ public class Field {
 			return this;
 
 		if (myWall != null) {
-			if (myWall.getWormHoleExit() != myWall) {
+			Wall wormholeExitOfOwnWall = myWall.getWormHoleExit();
+			if (wormholeExitOfOwnWall != myWall) {
 
-				return myWall.getWormHoleExit().getOwnField();
+				return wormholeExitOfOwnWall.getOwnField();
 			}
 
 			else if (myWall.checkDoor() == false) {
@@ -124,8 +125,9 @@ public class Field {
 		}
 
 		if (neighboursWall != null) {
-			if (neighboursWall.getWormHoleExit() != neighboursWall) {
-				return neighboursWall.getWormHoleExit().getOwnField();
+			Wall wormholeExitOfONeighboursWall = neighboursWall.getWormHoleExit();
+			if (wormholeExitOfONeighboursWall != neighboursWall) {
+				return wormholeExitOfONeighboursWall.getOwnField();
 			}
 
 			else if (neighboursWall.checkDoor() == false)
