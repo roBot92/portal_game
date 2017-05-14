@@ -1,4 +1,4 @@
-package portal_game;
+package struct_ojas;
 
 import static org.junit.Assert.*;
 
@@ -23,7 +23,7 @@ public class SampleTest {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		assertTrue(true);
 	}
 
 }

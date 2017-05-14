@@ -221,7 +221,7 @@ import org.xml.sax.SAXParseException;
 		 * (non-Javadoc)
 		 * @see struct_ojas.Drawable#draw(java.awt.Graphics)
 		 */
-		@Override
+
 		public void draw(Graphics g, int size) {
 			maze.draw(g, size);
 			
@@ -338,7 +338,7 @@ import org.xml.sax.SAXParseException;
 			this.replicatorThread.stopThread();
 		}
 
-		@Override
+
 		public void actionPerformed(ActionEvent bPressed) {
 			if(bPressed.getActionCommand().equals("start")){
 				mainframe.invokeMapChoosingPanel();
