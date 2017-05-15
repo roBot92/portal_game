@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
 
-public class ScaleTest {
+public class TestScale {
 
 	private Scale scale;
 	private Door door;
