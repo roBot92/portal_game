@@ -119,7 +119,7 @@ public class Field {
 				return wormholeExitOfOwnWall.getOwnField();
 			}
 
-			else if (myWall.checkDoor() == false) {
+			else if (!myWall.checkDoor()) {
 				return this;
 			}
 		}
