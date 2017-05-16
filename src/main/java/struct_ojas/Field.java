@@ -181,7 +181,7 @@ public class Field {
 	 *         2016.04.23
 	 */
 	public Item performPick() {
-		if (items.size() != 0) {
+		if (!items.isEmpty()) {
 			Item temp = items.get(items.size() - 1).onPickAction();
 			if (temp != null) {
 				items.remove(temp);
