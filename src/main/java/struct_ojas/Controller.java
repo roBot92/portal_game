@@ -259,7 +259,7 @@ import org.xml.sax.SAXParseException;
 				case KeyEvent.VK_T: player1.putDown(); break;
 				case KeyEvent.VK_SPACE: player1.fire(); break;
 				case KeyEvent.VK_Q: player1.changeBulletType(); break;
-				case KeyEvent.VK_F: player1.turn();
+				case KeyEvent.VK_F: player1.turn(); break;
 				default: break;
 				}
 				
