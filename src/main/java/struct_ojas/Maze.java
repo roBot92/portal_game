@@ -73,7 +73,7 @@ public class Maze {
 	
 	
 	public Player addPlayerToCorner(int playerNum, int cornerIndex){
-		Field f=null;
+		Field f;
 		switch(cornerIndex){
 		case 0: f=fields[0][0]; break;
 		case 1: f=fields[sizeX-1][0]; break;
