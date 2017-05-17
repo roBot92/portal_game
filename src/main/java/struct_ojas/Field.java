@@ -119,7 +119,7 @@ public class Field {
 				return wormholeExitOfOwnWall.getOwnField();
 			}
 
-			else if (myWall.checkDoor() == false) {
+			else if (!myWall.checkDoor()) {
 				return this;
 			}
 		}
@@ -130,7 +130,7 @@ public class Field {
 				return wormholeExitOfONeighboursWall.getOwnField();
 			}
 
-			else if (neighboursWall.checkDoor() == false)
+			else if (!neighboursWall.checkDoor())
 				return this;
 		}
 
@@ -181,12 +181,11 @@ public class Field {
 	 *         2016.04.23
 	 */
 	public Item performPick() {
-		if (items.size() != 0) {
+		if (!items.isEmpty()) {
 			Item temp = items.get(items.size() - 1).onPickAction();
 			if (temp != null) {
 				items.remove(temp);
 				this.stepOff(temp.getWeight());
-			} else {
 			}
 			return temp;
 		}
