@@ -159,9 +159,13 @@ import org.xml.sax.SAXParseException;
 						int x=Integer.parseInt(wall.getAttribute("posX"));
 						int y=Integer.parseInt(wall.getAttribute("posY"));
 						int dir=Integer.parseInt(wall.getAttribute("orientation"));
-						int scaleX=Integer.parseInt(scale.getAttribute("posX"));
-						int scaleY=Integer.parseInt(scale.getAttribute("posY"));
-						maze.addWallWithDoor(x, y, dir, scaleX, scaleY);
+						
+						if(scale != null){
+							int scaleX=Integer.parseInt(scale.getAttribute("posX"));
+							int scaleY=Integer.parseInt(scale.getAttribute("posY"));
+							maze.addWallWithDoor(x, y, dir, scaleX, scaleY);
+						}
+						
 						
 					}
 					
@@ -251,15 +255,24 @@ import org.xml.sax.SAXParseException;
 			if(player1!=null){
 				
 				switch(e.getKeyCode()){
-				case KeyEvent.VK_W: player1.step(1); break;
-				case KeyEvent.VK_D: player1.step(2); break;
-				case KeyEvent.VK_S: player1.step(3); break;
-				case KeyEvent.VK_A: player1.step(4); break;
-				case KeyEvent.VK_R: player1.pickUp(); break;
-				case KeyEvent.VK_T: player1.putDown(); break;
-				case KeyEvent.VK_SPACE: player1.fire(); break;
-				case KeyEvent.VK_Q: player1.changeBulletType(); break;
-				case KeyEvent.VK_F: player1.turn();
+				case KeyEvent.VK_W: player1.step(1);
+				break;
+				case KeyEvent.VK_D: player1.step(2); 
+				break;
+				case KeyEvent.VK_S: player1.step(3); 
+				break;
+				case KeyEvent.VK_A: player1.step(4); 
+				break;
+				case KeyEvent.VK_R: player1.pickUp(); 
+				break;
+				case KeyEvent.VK_T: player1.putDown(); 
+				break;
+				case KeyEvent.VK_SPACE: player1.fire(); 
+				break;
+				case KeyEvent.VK_Q: player1.changeBulletType(); 
+				break;
+				case KeyEvent.VK_F: player1.turn(); 
+				break;
 				default: break;
 				}
 				
@@ -268,15 +281,24 @@ import org.xml.sax.SAXParseException;
 			if(player2!=null){
 				switch(e.getKeyCode()){
 			
-				case KeyEvent.VK_UP: player2.step(1); break;
-				case KeyEvent.VK_RIGHT: player2.step(2); break;
-				case KeyEvent.VK_DOWN: player2.step(3); break;
-				case KeyEvent.VK_LEFT: player2.step(4); break;
-				case KeyEvent.VK_NUMPAD1: player2.pickUp(); break;
-				case KeyEvent.VK_NUMPAD2: player2.putDown(); break;
-				case KeyEvent.VK_ENTER: player2.fire(); break;
-				case KeyEvent.VK_SHIFT: player2.changeBulletType(); break;
-				case KeyEvent.VK_NUMPAD3: player2.turn(); break;
+				case KeyEvent.VK_UP: player2.step(1); 
+				break;
+				case KeyEvent.VK_RIGHT: player2.step(2); 
+				break;
+				case KeyEvent.VK_DOWN: player2.step(3); 
+				break;
+				case KeyEvent.VK_LEFT: player2.step(4); 
+				break;
+				case KeyEvent.VK_NUMPAD1: player2.pickUp(); 
+				break;
+				case KeyEvent.VK_NUMPAD2: player2.putDown(); 
+				break;
+				case KeyEvent.VK_ENTER: player2.fire(); 
+				break;
+				case KeyEvent.VK_SHIFT: player2.changeBulletType(); 
+				break;
+				case KeyEvent.VK_NUMPAD3: player2.turn(); 
+				break;
 				default: break;
 				}
 			}
@@ -340,11 +362,11 @@ import org.xml.sax.SAXParseException;
 
 
 		public void actionPerformed(ActionEvent bPressed) {
-			if(bPressed.getActionCommand().equals("start")){
+			if("start".equals(bPressed.getActionCommand())){
 				mainframe.invokeMapChoosingPanel();
 			}
 			
-			else if(bPressed.getActionCommand().equals("exit")){
+			else if("exit".equals(bPressed.getActionCommand())){
 				mainframe.removeAll();
 				mainframe.dispose();
 				mainframe=null;
@@ -352,17 +374,17 @@ import org.xml.sax.SAXParseException;
 				
 			}
 			
-			else if(bPressed.getActionCommand().equals("first")){
+			else if("first".equals(bPressed.getActionCommand())){
 				this.loadMap(0);
 				mainframe.invokeGamePanel();
 			}
 			
-			else if(bPressed.getActionCommand().equals("second")){
+			else if("second".equals(bPressed.getActionCommand())){
 				this.loadMap(1);
 				mainframe.invokeGamePanel();
 			}
 			
-			else if(bPressed.getActionCommand().equals("third")){
+			else if("third".equals(bPressed.getActionCommand())){
 				this.loadMap(2);
 				mainframe.invokeGamePanel();
 			}
