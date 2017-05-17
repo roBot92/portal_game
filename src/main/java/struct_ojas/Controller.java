@@ -340,7 +340,7 @@ import org.xml.sax.SAXParseException;
 
 
 		public void actionPerformed(ActionEvent bPressed) {
-			if(bPressed.getActionCommand().equals("start")){
+			if("start".equals(bPressed.getActionCommand())){
 				mainframe.invokeMapChoosingPanel();
 			}
 			
