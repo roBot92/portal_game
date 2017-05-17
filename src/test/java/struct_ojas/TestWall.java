@@ -86,6 +86,18 @@ public class TestWall {
 		wall.setGate(bulletType); 
 		verify(stargate, times(1)).setGreenWall(wall);
 		
+		bulletType = bulletTypes.BLUE;
+		wall.setGate(bulletType); 
+		verify(stargate, times(1)).setBlueWall(wall);
+		
+		bulletType = bulletTypes.RED;
+		wall.setGate(bulletType); 
+		verify(stargate, times(1)).setRedWall(wall);
+		
+		bulletType = bulletTypes.YELLOW;
+		wall.setGate(bulletType); 
+		verify(stargate, times(1)).setYellowWall(wall);
+		
 	}
 	
 	//On drawing tests we don't check types of lines, but the color and the number of invocations.
@@ -95,13 +107,14 @@ public class TestWall {
 			Graphics2D g = mock(Graphics2D.class);
 			
 			wall.draw(g, 10, 1);
-			verify(field, times(1)).getPosX();
-			verify(field, times(1)).getPosY();
-			verify(g, times(1)).setStroke(any(Stroke.class));
+			wall.draw(g, 10, 2);
+			verify(field, times(2)).getPosX();
+			verify(field, times(2)).getPosY();
+			verify(g, times(2)).setStroke(any(Stroke.class));
 			//Only black
-			verify(g, times(1)).setColor(Color.BLACK);
+			verify(g, times(2)).setColor(Color.BLACK);
 			
-			verify(g, times(1)).drawLine(anyInt(), anyInt(), anyInt(), anyInt());
+			verify(g, times(2)).drawLine(anyInt(), anyInt(), anyInt(), anyInt());
 			
 		}
 		@Test
