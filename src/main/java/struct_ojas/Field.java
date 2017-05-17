@@ -186,7 +186,6 @@ public class Field {
 			if (temp != null) {
 				items.remove(temp);
 				this.stepOff(temp.getWeight());
-			} else {
 			}
 			return temp;
 		}
