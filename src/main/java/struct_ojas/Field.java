@@ -130,7 +130,7 @@ public class Field {
 				return wormholeExitOfONeighboursWall.getOwnField();
 			}
 
-			else if (neighboursWall.checkDoor() == false)
+			else if (!neighboursWall.checkDoor())
 				return this;
 		}
 
