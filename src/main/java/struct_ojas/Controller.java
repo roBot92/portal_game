@@ -159,9 +159,13 @@ import org.xml.sax.SAXParseException;
 						int x=Integer.parseInt(wall.getAttribute("posX"));
 						int y=Integer.parseInt(wall.getAttribute("posY"));
 						int dir=Integer.parseInt(wall.getAttribute("orientation"));
-						int scaleX=Integer.parseInt(scale.getAttribute("posX"));
-						int scaleY=Integer.parseInt(scale.getAttribute("posY"));
-						maze.addWallWithDoor(x, y, dir, scaleX, scaleY);
+						
+						if(scale != null){
+							int scaleX=Integer.parseInt(scale.getAttribute("posX"));
+							int scaleY=Integer.parseInt(scale.getAttribute("posY"));
+							maze.addWallWithDoor(x, y, dir, scaleX, scaleY);
+						}
+						
 						
 					}
 					
