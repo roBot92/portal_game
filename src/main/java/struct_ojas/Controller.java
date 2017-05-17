@@ -344,7 +344,7 @@ import org.xml.sax.SAXParseException;
 				mainframe.invokeMapChoosingPanel();
 			}
 			
-			else if(bPressed.getActionCommand().equals("exit")){
+			else if("exit".equals(bPressed.getActionCommand())){
 				mainframe.removeAll();
 				mainframe.dispose();
 				mainframe=null;
