@@ -362,7 +362,7 @@ import org.xml.sax.SAXParseException;
 				mainframe.invokeGamePanel();
 			}
 			
-			else if(bPressed.getActionCommand().equals("third")){
+			else if("third".equals(bPressed.getActionCommand())){
 				this.loadMap(2);
 				mainframe.invokeGamePanel();
 			}
